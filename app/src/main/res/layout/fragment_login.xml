@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.adciasis.recoveryfy.auth.LoginViewModel" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_16"
+            android:paddingTop="@dimen/margin_login_top"
+            tools:context=".auth.AuthenticationActivity">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmailAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_40"
+                android:background="@drawable/rounded_corner_background"
+                android:hint="@string/email_address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMissedHeader" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_34"
+                android:background="@drawable/rounded_corner_background"
+                android:hint="@string/password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etEmailAddress" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRecoveryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_recovery"
+                app:layout_constraintEnd_toStartOf="@id/tvRecoveryTitle"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRecoveryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recoveryfy"
+                android:textAllCaps="true"
+                android:textColor="@color/rf_text_red"
+                android:textSize="@dimen/text_26"
+                app:layout_constraintBottom_toTopOf="@id/tvRecoveryDesc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivRecoveryIcon"
+                app:layout_constraintTop_toTopOf="@id/ivRecoveryIcon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRecoveryDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/loans_recovery_agency"
+                android:textAllCaps="true"
+                android:textColor="@color/rf_text_red"
+                android:textSize="@dimen/text_12"
+                app:layout_constraintEnd_toEndOf="@id/tvRecoveryTitle"
+                app:layout_constraintStart_toEndOf="@id/ivRecoveryIcon"
+                app:layout_constraintTop_toBottomOf="@id/tvRecoveryTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMissedHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:gravity="center"
+                android:text="@string/we_ve_missed_you_sign_in_to_continue"
+                android:textColor="@color/rf_text_gray5"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintEnd_toEndOf="@id/tvRecoveryDesc"
+                app:layout_constraintStart_toStartOf="@id/ivRecoveryIcon"
+                app:layout_constraintTop_toBottomOf="@id/ivRecoveryIcon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_24"
+                android:text="@string/forgot_password"
+                android:textColor="@color/rf_text_red"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNeedUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24"
+                android:text="@string/need_user"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toStartOf="@id/tvSignup"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up"
+                android:textColor="@color/rf_text_red"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvNeedUser"
+                app:layout_constraintTop_toBottomOf="@id/tvNeedUser"
+                app:layout_constraintTop_toTopOf="@id/tvNeedUser" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_38"
+                android:backgroundTint="@color/rf_btn_red"
+                android:text="@string/btn_login"
+                android:textColor="@color/white"
+                app:cornerRadius="@dimen/rounded_corner_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

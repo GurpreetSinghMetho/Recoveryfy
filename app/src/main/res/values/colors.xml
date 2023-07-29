@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="rf_text_red">#E83B3E</color>
+    <color name="rf_text_gray5">#6E717C</color>
+    <color name="rf_border_grey">#C1C1C1</color>
+    <color name="rf_btn_red">#FF6E66</color>
+    <color name="text_grey">#898989</color>
+    <color name="rf_status_grey">#C1C1C1</color>
+    <color name="rf_primary_red">#FF6E66</color>
+</resources>

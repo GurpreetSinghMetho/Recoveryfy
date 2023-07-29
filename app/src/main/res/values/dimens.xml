@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rounded_corner_8">8dp</dimen>
+    <dimen name="margin_login_top">80dp</dimen>
+
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_34">34dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+
+    <dimen name="text_26">26sp</dimen>
+    <dimen name="text_24">24sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="margin_38">38dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="progress_dialog_measure">50dp</dimen>
+    <dimen name="padding_xl">16dp</dimen>
+    <dimen name="action_bar_height">60dp</dimen>
+    <dimen name="margin_28">28dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+</resources>

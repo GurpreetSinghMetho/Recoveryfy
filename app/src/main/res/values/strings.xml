@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Recoveryfy</string>
+    <string name="loans_recovery_agency">Loans Recovery Agency</string>
+    <string name="recoveryfy">Recoveryfy</string>
+    <string name="we_ve_missed_you_sign_in_to_continue">We’ve missed you! Sign in to\ncontinue</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="btn_login">Login</string>
+    <string name="need_user">Need user? </string>
+    <string name="sign_up">Sign up</string>
+    <string name="title_forgot_password">Forgot Password</string>
+    <string name="forgot_password_header">Enter email Address register with your \naccount.</string>
+    <string name="submit">Submit</string>
+</resources>
