@@ -9,4 +9,5 @@
     <color name="text_grey">#898989</color>
     <color name="rf_status_grey">#C1C1C1</color>
     <color name="rf_primary_red">#FF6E66</color>
+    <color name="tp_black">#80000000</color>
 </resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RecoverfyDialog" parent="Theme.AppCompat.Light.DialogWhenLarge">
+        <item name = "android:windowBackground">@color/tp_black</item >
+    </style>
+</resources>

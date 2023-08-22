@@ -67,7 +67,7 @@ abstract class BaseFragment<V : BaseViewModel, B : ViewDataBinding> : Fragment()
     }
 
     private fun initProgressDialog() {
-        progressDialog = Dialog(requireContext())
+        progressDialog = Dialog(requireContext(),R.style.RecoverfyDialog)
         progressDialog.setContentView(R.layout.progress_dialog)
     }
 
