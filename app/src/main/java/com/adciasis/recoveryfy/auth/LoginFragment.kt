@@ -5,6 +5,7 @@ import com.adciasis.recoveryfy.R
 import com.adciasis.recoveryfy.base.BaseFragment
 import com.adciasis.recoveryfy.data.LoginRequest
 import com.adciasis.recoveryfy.databinding.FragmentLoginBinding
+import com.adciasis.recoveryfy.home.HomeFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -23,7 +24,7 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding>() {
         binding.btnLogin.setOnClickListener {
             viewModel.login(
                 LoginRequest(
-                    userName = "partner@gmail.com",
+                    userName = "rakesh412.kumar@gmail.com",
                     password = "admin@123",
                     systemInfo = "",
                     latitude = "0",
@@ -31,6 +32,13 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding>() {
                     appType = "android"
                 )
             )
+        }
+    }
+
+    override fun observeLiveData() {
+        super.observeLiveData()
+        viewModel.loginResponseLiveData.observe(viewLifecycleOwner){
+            launchFragment(HomeFragment(), HomeFragment::class.java.name,true)
         }
     }
 }

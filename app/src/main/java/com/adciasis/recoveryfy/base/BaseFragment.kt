@@ -1,5 +1,6 @@
 package com.adciasis.recoveryfy.base
 
+
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
@@ -8,13 +9,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.annotation.LayoutRes
+import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.adciasis.recoveryfy.R
 import com.adciasis.recoveryfy.BR
-import com.adciasis.recoveryfy.auth.LoginFragment
+import com.adciasis.recoveryfy.R
 
+private const val DIALOG_YES = "Yes"
+private const val DIALOG_NO = "No"
+private const val DIALOG_ERROR = "Error!"
 abstract class BaseFragment<V : BaseViewModel, B : ViewDataBinding> : Fragment() {
     protected lateinit var binding: B
 
@@ -96,18 +100,43 @@ abstract class BaseFragment<V : BaseViewModel, B : ViewDataBinding> : Fragment()
 
     protected open fun initViews(){}
 
-    protected open fun observeLiveData(){}
+    protected open fun observeLiveData(){
+        viewModel.errorLiveData.observe(viewLifecycleOwner){
+            showAlertDialog(msg =  it?.msg)
+        }
+    }
 
-    protected fun launchFragment(fragment: Fragment,tagName:String){
-        requireActivity().supportFragmentManager.beginTransaction()
-            .add(R.id.fragmentContainer, fragment)
-            .addToBackStack(tagName)
+    protected fun launchFragment(fragment: Fragment, tagName: String, isPrimary: Boolean = false) {
+        requireActivity().supportFragmentManager.beginTransaction().apply {
+            if (isPrimary) {
+                addToBackStack(null)
+                replace(R.id.fragmentContainer, fragment)
+                setPrimaryNavigationFragment(fragment)
+            } else {
+                add(R.id.fragmentContainer, fragment)
+                addToBackStack(tagName)
+            }
+        }
             .commit()
     }
 
     protected open fun onBackPress() {
         if (requireActivity().supportFragmentManager.backStackEntryCount > 1)
             requireActivity().supportFragmentManager.popBackStack()
+    }
+
+    protected fun showAlertDialog(
+        title: String? = null,
+        msg: String?,
+        isCancelable: Boolean = false,
+    ) {
+        AlertDialog.Builder(requireContext()).apply {
+            setTitle(title ?: DIALOG_ERROR)
+            setMessage(msg)
+            setCancelable(isCancelable)
+            setPositiveButton(DIALOG_YES) { dialog, _ -> dialog.cancel() }
+            setNegativeButton(DIALOG_NO) { dialog, _ -> dialog.cancel() }
+        }.show()
     }
 
 }
