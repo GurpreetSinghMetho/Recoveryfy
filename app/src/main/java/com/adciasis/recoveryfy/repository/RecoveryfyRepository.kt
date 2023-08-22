@@ -9,8 +9,6 @@ import retrofit2.http.Body
 interface RecoveryfyRepository {
 
     interface LoginRepo{
-        fun loginUser(
-            @Body loginRequest: LoginRequest,
-        ): Flow<Resource<LoginResponse>>
+        fun loginUser(loginRequest: LoginRequest): Flow<Resource<LoginResponse>>
     }
 }

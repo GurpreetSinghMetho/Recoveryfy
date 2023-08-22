@@ -26,7 +26,6 @@ object AppNetworkModule {
         .client(okHttpClient)
         .build()
 
-
     @Singleton
     @Provides
     fun providesOkHttpClientClient() = OkHttpClient.Builder().apply {
@@ -36,12 +35,13 @@ object AppNetworkModule {
     }.readTimeout(60, TimeUnit.SECONDS).connectTimeout(60, TimeUnit.SECONDS).build()
 
     @Provides
+    @Singleton
     fun provideRecoveryfyAPIServices(retrofit: Retrofit): RecoveryfyAPIServices =
         retrofit.create(RecoveryfyAPIServices::class.java)
 
     @Provides
+    @Singleton
     fun providesDispatcher(): DispatcherProvider = DefaultDispatcherProvider()
-
 
     @Singleton
     @Provides
