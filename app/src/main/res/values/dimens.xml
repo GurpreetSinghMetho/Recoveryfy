@@ -22,4 +22,5 @@
     <dimen name="action_bar_height">60dp</dimen>
     <dimen name="margin_28">28dp</dimen>
     <dimen name="padding_20">20dp</dimen>
+    <dimen name="bottom_nav_height">68dp</dimen>
 </resources>

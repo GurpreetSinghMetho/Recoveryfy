@@ -4,4 +4,9 @@
     <style name="RecoverfyDialog" parent="Theme.AppCompat.Light.DialogWhenLarge">
         <item name = "android:windowBackground">@color/tp_black</item >
     </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorSurface">@color/white</item>
+        <item name="colorSecondaryContainer">@null</item>
+    </style>
 </resources>
