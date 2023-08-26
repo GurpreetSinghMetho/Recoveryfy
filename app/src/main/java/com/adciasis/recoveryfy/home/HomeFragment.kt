@@ -21,18 +21,9 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
         with(binding.bottomNavigation) {
             setOnItemSelectedListener { item ->
                 when (item.itemId) {
-                    R.id.pageProfile -> {
-                        launchHome(ProfileFragment())
-
-                    }
-
-                    R.id.pageNotification -> {
-                        launchHome(NotificationFragment())
-                    }
-
-                    else -> {
-                        launchHome(DashboardFragment())
-                    }
+                    R.id.pageProfile ->  launchHome(ProfileFragment())
+                    R.id.pageNotification -> launchHome(NotificationFragment())
+                    else ->  launchHome(DashboardFragment())
                 }
                 return@setOnItemSelectedListener true
             }
@@ -55,10 +46,6 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
         requireActivity().supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentHomeContainer, fragment)
             .commit()
-    }
-
-    override fun onBackPress() {
-        requireActivity().finish()
     }
 
 }

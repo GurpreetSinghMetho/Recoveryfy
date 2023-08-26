@@ -9,4 +9,8 @@ class DashboardFragment : BaseFragment<HomeViewModel,FragmentDashboardBinding>()
     override val layout: Int = R.layout.fragment_dashboard
 
     override val viewModel by activityViewModels<HomeViewModel>()
+
+    override fun onBackPress() {
+        requireActivity().finish()
+    }
 }
