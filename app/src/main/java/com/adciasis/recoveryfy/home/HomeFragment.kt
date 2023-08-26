@@ -8,6 +8,7 @@ import com.adciasis.recoveryfy.base.BaseFragment
 import com.adciasis.recoveryfy.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+private const val READ_NOTIFICATION = 0
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
 
@@ -22,12 +23,15 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
             setOnItemSelectedListener { item ->
                 when (item.itemId) {
                     R.id.pageProfile ->  launchHome(ProfileFragment())
-                    R.id.pageNotification -> launchHome(NotificationFragment())
+                    R.id.pageNotification -> {
+                        launchHome(NotificationFragment())
+                        showBadgeOnNotification(READ_NOTIFICATION)
+                    }
                     else ->  launchHome(DashboardFragment())
                 }
                 return@setOnItemSelectedListener true
             }
-            showBadgeOnNotification(99)
+            showBadgeOnNotification(2)
         }
     }
 

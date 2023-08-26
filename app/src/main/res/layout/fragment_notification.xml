@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:gravity="center"
         android:focusable="true">
-        <TextView
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNotificationTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/rf_primary_red"
+            android:padding="@dimen/padding_20"
+            android:text="@string/menu_notification"
+            android:textColor="@color/black"
             android:textSize="@dimen/text_20"
-            android:text="Notification"/>
-    </LinearLayout>
+            app:layout_constraintBottom_toTopOf="@id/rvNotification"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNotification"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNotificationTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

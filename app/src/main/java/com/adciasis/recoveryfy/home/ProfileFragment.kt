@@ -11,4 +11,8 @@ class ProfileFragment : BaseFragment<HomeViewModel, FragmentProfileBinding>() {
     override val layout: Int = R.layout.fragment_profile
 
     override val viewModel by activityViewModels<HomeViewModel>()
+
+    override fun initViews() {
+        super.initViews()
+    }
 }

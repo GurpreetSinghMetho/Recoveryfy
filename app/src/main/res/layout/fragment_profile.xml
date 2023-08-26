@@ -1,17 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <LinearLayout
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:gravity="center"
+        android:paddingHorizontal="@dimen/padding_20"
         android:focusable="true">
-        <TextView
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/rf_primary_red"
+            android:layout_marginTop="@dimen/margin_38"
+            android:src="@drawable/ic_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/text_20"
+            android:text="@string/menu_profile"
+            android:textColor="@color/black"
             android:textSize="@dimen/text_20"
-            android:text="Profile"/>
-    </LinearLayout>
+            app:layout_constraintBottom_toTopOf="@id/iv_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:text="Ayush Rai"
+            android:textSize="@dimen/text_20"
+            app:layout_constraintBottom_toTopOf="@id/tvEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_profile"
+            app:layout_constraintTop_toTopOf="@id/iv_profile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:text="anuj.rai8924@gmail.com"
+            android:textColor="@color/rf_nav_item_grey"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_profile"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:text="9878524669"
+            android:textColor="@color/rf_nav_item_grey"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_profile"
+            app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEditProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:text="Edit Profile"
+            android:textColor="@color/rf_text_red"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_profile"
+            app:layout_constraintTop_toBottomOf="@id/tvMobile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddressTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_28"
+            android:text="ADDRESS"
+            android:textColor="@color/rf_nav_item_grey"
+            android:textSize="@dimen/text_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_profile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Flat 202, dagdu patil nagar, thergaon, Pune -411033"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddressTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAgencyTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_28"
+            android:text="AGENCY NAME"
+            android:textColor="@color/rf_nav_item_grey"
+            android:textSize="@dimen/text_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAgencyName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SHANKRIT ASSOCIATION"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAgencyTitle" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_background"
+            android:text="Log out"
+            android:textColor="@color/rf_btn_red"
+            app:layout_constraintBottom_toTopOf="@id/tvAppVersion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAppVersion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_version"
+            android:textColor="@color/rf_nav_item_grey"
+            android:padding="@dimen/padding_18"
+            android:textSize="@dimen/text_14"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

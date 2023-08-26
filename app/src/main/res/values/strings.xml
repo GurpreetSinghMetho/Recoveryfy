@@ -15,4 +15,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_notification">Notifications</string>
     <string name="menu_profile">Profile</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="_1m_ago">1m ago</string>
+    <string name="app_version">App Version 1.0</string>
 </resources>
