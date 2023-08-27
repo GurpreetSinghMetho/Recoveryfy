@@ -18,4 +18,5 @@
     <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="_1m_ago">1m ago</string>
     <string name="app_version">App Version 1.0</string>
+    <string name="search_by_chassis_number_engine_number_amp_registration_number"><![CDATA[Search by Chassis Number, Engine Number & Registration Number]]></string>
 </resources>

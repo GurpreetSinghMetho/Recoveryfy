@@ -2,17 +2,89 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:gravity="center"
+        android:paddingTop="@dimen/margin_30"
+        android:paddingHorizontal="@dimen/padding_20"
         android:focusable="true">
-        <TextView
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAssociateIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/rf_primary_red"
-            android:textSize="@dimen/text_20"
-            android:text="Dashboard"/>
-    </LinearLayout>
+            android:src="@drawable/ic_dashboard"
+            app:layout_constraintStart_toEndOf="@id/tvAssociationTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAssociationTitle"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold"
+            android:text="Hello, Sanskrit Associates"
+            app:layout_constraintEnd_toStartOf="@id/ivAssociateIcon"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAssociation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/ivAssociateIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/text_16"
+            android:text="Welcome Back!"
+            app:layout_constraintTop_toBottomOf="@id/tvAssociationTitle" />
+
+        <LinearLayout
+            android:id="@+id/llSearchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:background="@drawable/search_background"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivAssociateIcon">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search_by_chassis_number_engine_number_amp_registration_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_12" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/padding_12dp"
+                android:hint="@string/search_by_chassis_number_engine_number_amp_registration_number"
+                android:lines="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="@dimen/padding_14"
+                android:singleLine="true"
+                android:textColorHint="@color/rf_status_grey" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecovery"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_12"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llSearchView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

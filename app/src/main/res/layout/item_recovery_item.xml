@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="recoveryModel"
+            type="com.adciasis.recoveryfy.data.RecoveryData" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingStart="@dimen/padding_18"
+                app:layout_constraintBottom_toBottomOf="@id/ivRecoveryIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/ivRecoveryIcon"
+                app:layout_constraintTop_toTopOf="@id/ivRecoveryIcon">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14"
+                    android:text="@{recoveryModel.title}"
+                    tools:text="Pending" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/rf_border_grey"
+                    android:textSize="@dimen/text_12"
+                    android:text="@{recoveryModel.desc}"
+                    tools:text="(Tasks that are awaiting completion) " />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_6dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_22"
+                    android:text="@{recoveryModel.count}"
+                    tools:text="5000" />
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRecoveryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_group_pending" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
