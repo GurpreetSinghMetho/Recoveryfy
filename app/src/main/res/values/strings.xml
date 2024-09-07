@@ -19,4 +19,10 @@
     <string name="_1m_ago">1m ago</string>
     <string name="app_version">App Version 1.0</string>
     <string name="search_by_chassis_number_engine_number_amp_registration_number"><![CDATA[Search by Chassis Number, Engine Number & Registration Number]]></string>
+    <string name="view">View</string>
+    <string name="enter_the_otp_sent_to">Enter the OTP sent to</string>
+    <string name="didn_t_receive_the_otp">Didn’t receive the OTP?</string>
+    <string name="resend_otp">RESEND OTP</string>
+    <string name="otp_hint">*</string>
+    <string name="otp_verification">OTP Verification</string>
 </resources>

@@ -18,4 +18,10 @@ object UseCaseProvider {
         recoveryfyRepositoryImpl: RecoveryfyRepositoryImpl,
     ): RecoveryfyRepository.LoginRepo = recoveryfyRepositoryImpl
 
+    @Singleton
+    @Provides
+    fun providesProfileDetails(
+        recoveryfyRepositoryImpl: RecoveryfyRepositoryImpl,
+    ): RecoveryfyRepository.ProfileDetails = recoveryfyRepositoryImpl
+
 }

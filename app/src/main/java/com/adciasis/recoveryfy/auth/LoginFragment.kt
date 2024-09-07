@@ -22,16 +22,17 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding>() {
             launchFragment(ForgotPasswordFragment(),ForgotPasswordFragment::class.java.name)
         }
         binding.btnLogin.setOnClickListener {
-            viewModel.login(
-                LoginRequest(
-                    userName = "rakesh412.kumar@gmail.com",
-                    password = "admin@123",
-                    systemInfo = "",
-                    latitude = "0",
-                    longitude = "0",
-                    appType = "android"
-                )
-            )
+            launchFragment(HomeFragment(), HomeFragment::class.java.name,true)
+//            viewModel.login(
+//                LoginRequest(
+//                    userName = "rakesh412.kumar@gmail.com",
+//                    password = "admin@123",
+//                    systemInfo = "",
+//                    latitude = "0",
+//                    longitude = "0",
+//                    appType = "android"
+//                )
+//            )
         }
     }
 

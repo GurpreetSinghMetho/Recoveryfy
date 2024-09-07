@@ -13,4 +13,9 @@ interface RecoveryfyAPIServices {
     suspend fun loginUser(
         @Body loginRequest: LoginRequest,
     ): Response<LoginResponse>?
+
+    @POST(ApiUrls.ProfileDetails)
+    suspend fun profileDetails(
+        @Body loginRequest: LoginRequest,
+    ): Response<LoginResponse>?
 }

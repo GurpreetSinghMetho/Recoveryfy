@@ -9,19 +9,9 @@ interface DispatcherProvider {
     @MainDispatcher
     fun main(): CoroutineDispatcher = Dispatchers.Main
 
-    @DefaultDispatcher
-    fun default(): CoroutineDispatcher = Dispatchers.Main
-
     @IoDispatcher
-    fun io(): CoroutineDispatcher = Dispatchers.Main
-
-    @UnConfined
-    fun unconfined(): CoroutineDispatcher = Dispatchers.Main
+    fun io(): CoroutineDispatcher = Dispatchers.IO
 }
-
-@Retention(AnnotationRetention.BINARY)
-@Qualifier
-annotation class DefaultDispatcher
 
 @Retention(AnnotationRetention.BINARY)
 @Qualifier
@@ -31,8 +21,5 @@ annotation class MainDispatcher
 @Qualifier
 annotation class IoDispatcher
 
-@Retention(AnnotationRetention.BINARY)
-@Qualifier
-annotation class UnConfined
 
 open class DefaultDispatcherProvider : DispatcherProvider

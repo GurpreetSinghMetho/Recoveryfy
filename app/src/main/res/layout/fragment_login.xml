@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="viewModel"
             type="com.adciasis.recoveryfy.auth.LoginViewModel" />
     </data>
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:fillViewport="true">
 
-        <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="@dimen/padding_16"
@@ -26,7 +29,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_40"
                 android:background="@drawable/rounded_corner_background"
+                android:fontFamily="@font/poppins_regular"
                 android:hint="@string/email_address"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvMissedHeader" />
@@ -37,57 +47,51 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_34"
                 android:background="@drawable/rounded_corner_background"
+                android:fontFamily="@font/poppins_regular"
                 android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/etEmailAddress" />
+
+            <ImageView
+                android:id="@+id/viewPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:contentDescription="@string/view"
+                android:src="@drawable/ic_view"
+                app:layout_constraintBottom_toBottomOf="@id/etPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etPassword" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivRecoveryIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_recovery"
-                app:layout_constraintEnd_toStartOf="@id/tvRecoveryTitle"
+                android:src="@drawable/login_logo"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvRecoveryTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/recoveryfy"
-                android:textAllCaps="true"
-                android:textColor="@color/rf_text_red"
-                android:textSize="@dimen/text_26"
-                app:layout_constraintBottom_toTopOf="@id/tvRecoveryDesc"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/ivRecoveryIcon"
-                app:layout_constraintTop_toTopOf="@id/ivRecoveryIcon" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvRecoveryDesc"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/loans_recovery_agency"
-                android:textAllCaps="true"
-                android:textColor="@color/rf_text_red"
-                android:textSize="@dimen/text_12"
-                app:layout_constraintEnd_toEndOf="@id/tvRecoveryTitle"
-                app:layout_constraintStart_toEndOf="@id/ivRecoveryIcon"
-                app:layout_constraintTop_toBottomOf="@id/tvRecoveryTitle" />
-
-            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvMissedHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_30"
+                android:fontFamily="@font/poppins_medium"
                 android:gravity="center"
                 android:text="@string/we_ve_missed_you_sign_in_to_continue"
                 android:textColor="@color/rf_text_gray5"
                 android:textSize="@dimen/text_16"
-                app:layout_constraintEnd_toEndOf="@id/tvRecoveryDesc"
+                app:layout_constraintEnd_toEndOf="@id/ivRecoveryIcon"
                 app:layout_constraintStart_toStartOf="@id/ivRecoveryIcon"
                 app:layout_constraintTop_toBottomOf="@id/ivRecoveryIcon" />
 
@@ -96,6 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/text_24"
+                android:fontFamily="@font/poppins_regular"
                 android:text="@string/forgot_password"
                 android:textColor="@color/rf_text_red"
                 android:textSize="@dimen/text_14"
@@ -107,6 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_24"
+                android:fontFamily="@font/poppins_regular"
                 android:text="@string/need_user"
                 android:textColor="@color/text_grey"
                 android:textSize="@dimen/text_14"
@@ -119,6 +125,7 @@
                 android:id="@+id/tvSignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:text="@string/sign_up"
                 android:textColor="@color/rf_text_red"
                 android:textSize="@dimen/text_14"
@@ -133,14 +140,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_38"
                 android:backgroundTint="@color/rf_btn_red"
+                android:fontFamily="@font/poppins_medium"
                 android:text="@string/btn_login"
                 android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
                 app:cornerRadius="@dimen/rounded_corner_8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>

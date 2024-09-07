@@ -1,6 +1,5 @@
 package com.adciasis.recoveryfy.auth
 
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.adciasis.recoveryfy.R
 import com.adciasis.recoveryfy.base.BaseFragment
@@ -19,6 +18,9 @@ class ForgotPasswordFragment :
         super.initViews()
         binding.actionBar.ivBackPress.setOnClickListener {
             onBackPress()
+        }
+        binding.btnSubmit.setOnClickListener {
+            launchFragment(OtpVerificationFragment(), OtpVerificationFragment::class.java.name)
         }
     }
 }

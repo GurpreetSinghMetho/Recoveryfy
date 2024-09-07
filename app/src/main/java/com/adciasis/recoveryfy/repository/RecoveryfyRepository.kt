@@ -11,4 +11,8 @@ interface RecoveryfyRepository {
     interface LoginRepo{
         fun loginUser(loginRequest: LoginRequest): Flow<Resource<LoginResponse>>
     }
+
+    interface ProfileDetails{
+        fun getProfileDetails(loginRequest: LoginRequest): Flow<Resource<LoginResponse>>
+    }
 }

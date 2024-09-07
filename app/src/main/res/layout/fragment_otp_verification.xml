@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/actionBar"
+            layout="@layout/actionbar_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding_16"
+                android:paddingTop="@dimen/margin_login_top"
+                tools:context=".auth.AuthenticationActivity">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/otpLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_40"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNumber">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etOtpOne"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_40"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:hint="@string/otp_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_14"
+                        app:layout_constraintEnd_toStartOf="@id/etOtpTwo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etOtpTwo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:hint="@string/otp_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_14"
+                        app:layout_constraintEnd_toStartOf="@id/etOtpThree"
+                        app:layout_constraintStart_toEndOf="@id/etOtpOne"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etOtpThree"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:hint="@string/otp_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_14"
+                        app:layout_constraintEnd_toStartOf="@id/etOtpFour"
+                        app:layout_constraintStart_toEndOf="@id/etOtpTwo"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etOtpFour"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:hint="@string/otp_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_14"
+                        app:layout_constraintEnd_toStartOf="@id/etOtpFive"
+                        app:layout_constraintStart_toEndOf="@id/etOtpThree"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etOtpFive"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:hint="@string/otp_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_14"
+                        app:layout_constraintEnd_toStartOf="@id/etOtpSix"
+                        app:layout_constraintStart_toEndOf="@id/etOtpFour"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etOtpSix"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_40"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:hint="@string/otp_hint"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/etOtpFive"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHeader"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="@string/enter_the_otp_sent_to"
+                    android:textColor="@color/rf_text_gray5"
+                    android:textSize="@dimen/text_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="+91-7767678865"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="@dimen/text_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvHeader" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOtp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/didn_t_receive_the_otp"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_14"
+                    app:layout_constraintEnd_toStartOf="@id/tvResend"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/otpLayout" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvResend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/resend_otp"
+                    android:textColor="@color/rf_text_red"
+                    android:textSize="@dimen/text_14"
+                    app:layout_constraintBottom_toBottomOf="@id/tvOtp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@id/tvOtp"
+                    app:layout_constraintTop_toTopOf="@id/tvOtp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:backgroundTint="@color/rf_btn_red"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_14"
+                    app:cornerRadius="@dimen/rounded_corner_8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvOtp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.adciasis.recoveryfy.auth.OtpVerificationViewModel" />
+    </data>
+</layout>
