@@ -22,6 +22,13 @@ class DashboardFragment : BaseFragment<HomeViewModel,FragmentDashboardBinding>()
             adapter= recoveryDashboardAdapter
             recoveryDashboardAdapter.setRecoveryList(viewModel.recoverList())
         }
+        binding.searchBar.setOnClickListener {
+            SearchFragment::class.java.canonicalName?.let { it1 ->
+                launchFragment(SearchFragment(),
+                    it1
+                )
+            }
+        }
     }
 
     override fun onBackPress() {

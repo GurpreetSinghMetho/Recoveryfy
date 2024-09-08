@@ -215,7 +215,7 @@
                     android:layout_marginTop="@dimen/margin_24"
                     android:backgroundTint="@color/rf_btn_red"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="@string/submit"
+                    android:text="@string/verify"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_14"
                     app:cornerRadius="@dimen/rounded_corner_8"

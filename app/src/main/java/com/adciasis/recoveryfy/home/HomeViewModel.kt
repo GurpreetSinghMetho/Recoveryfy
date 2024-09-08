@@ -14,19 +14,24 @@ class HomeViewModel @Inject constructor() : BaseViewModel() {
 
     fun recoverList() = listOf(
         RecoveryData(
-            icon = R.drawable.ic_group_pending,
-            title = "Pending",
-            count = "15000"
-        ),
-        RecoveryData(
             icon = R.drawable.ic_group_release,
             title = "Release",
             count = "5000"
         ),
         RecoveryData(
+            icon = R.drawable.ic_group_pending,
+            title = "Pending",
+            count = "15000"
+        ),
+        RecoveryData(
             icon = R.drawable.ic_group_holds,
             title = "Holds",
             count = "1000"
+        ),
+        RecoveryData(
+            icon = R.drawable.ic_close,
+            title = "Close",
+            count = "500"
         )
     )
 }

@@ -19,7 +19,12 @@ class OtpVerificationFragment :
             onBackPress()
         }
         binding.btnSubmit.setOnClickListener {
-
+            PasswordResetFragment::class.java.canonicalName?.let { it1 ->
+                launchFragment(
+                    PasswordResetFragment(),
+                    it1
+                )
+            }
         }
         binding.tvResend.setOnClickListener {
 

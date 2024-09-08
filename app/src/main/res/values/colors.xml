@@ -14,4 +14,8 @@
     <color name="rf_nav_item_grey">#C1C1C1</color>
     <color name="hint_color">#898989</color>
     <color name="grey_dark">#434343</color>
+    <color name="grey_light">#EFEFEF</color>
+    <color name="nav_bg">#FBFCFC</color>
+    <color name="row_bg">#F5F5F5</color>
+    <color name="btn_color">#DEE0EC</color>
 </resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10dp"
+    android:background="@color/row_bg"
+    android:padding="@dimen/_15dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/id"
+        android:textColor="@color/rf_text_gray5"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toStartOf="@+id/id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="7647564.7456"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintBottom_toBottomOf="@id/tv_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_id"
+        app:layout_constraintTop_toTopOf="@id/tv_id" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/user_name"
+        android:textColor="@color/rf_text_gray5"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toStartOf="@+id/tv_user_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_id" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Anuj Rai"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintBottom_toBottomOf="@id/tv_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_user"
+        app:layout_constraintTop_toTopOf="@id/tv_user" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/user_code"
+        android:textColor="@color/rf_text_gray5"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toStartOf="@+id/tv_user_code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_user_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="7647564"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintBottom_toBottomOf="@id/tv_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_code"
+        app:layout_constraintTop_toTopOf="@id/tv_code" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_stage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/stage"
+        android:textColor="@color/rf_text_gray5"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toStartOf="@+id/tv_stage_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_code" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_stage_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/hold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintBottom_toBottomOf="@id/tv_stage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_stage"
+        app:layout_constraintTop_toTopOf="@id/tv_stage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/edit_date"
+        android:textColor="@color/rf_text_gray5"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toStartOf="@+id/tv_edit_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_stage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_edit_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="12/3/2024"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintBottom_toBottomOf="@id/tv_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_edit"
+        app:layout_constraintTop_toTopOf="@id/tv_edit" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_file"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/attach_file"
+        android:textColor="@color/rf_text_gray5"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toStartOf="@+id/tv_attach_file"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_edit" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_attach_file"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/view_file"
+        android:textColor="@color/rf_btn_red"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintBottom_toBottomOf="@id/tv_file"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_file"
+        app:layout_constraintTop_toTopOf="@id/tv_file" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

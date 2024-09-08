@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin_40"
+    android:paddingHorizontal="@dimen/_20dp"
+    android:background="@color/white"
+    android:elevation="@dimen/_5dp"
+    android:visibility="gone"
+    android:paddingVertical="@dimen/_20dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:focusable="true"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_20dp">
+
+            <ImageView
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10dp"
+                android:src="@drawable/filter_indicator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_from_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/from_date"
+                android:textColor="@color/rf_text_gray5"
+                android:textSize="@dimen/text_15sp"
+                app:layout_constraintEnd_toStartOf="@id/tv_to_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/indicator" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/etFromDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:background="@drawable/rounded_corner_background"
+                android:drawableEnd="@drawable/ic_calander"
+                android:drawablePadding="@dimen/_5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/from_date"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toStartOf="@id/etToDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_from_date" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_to_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/to_date"
+                android:textColor="@color/rf_text_gray5"
+                android:textSize="@dimen/text_15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_from_date"
+                app:layout_constraintTop_toBottomOf="@id/indicator" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/etToDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/rounded_corner_background"
+                android:drawableEnd="@drawable/ic_calander"
+                android:drawablePadding="@dimen/_5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/to_date"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/etFromDate"
+                app:layout_constraintTop_toBottomOf="@id/tv_to_date" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_last_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/registration_no"
+                android:textColor="@color/rf_text_gray5"
+                android:textSize="@dimen/text_15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etFromDate" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etRegistrationNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/rounded_corner_background"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/registration_no"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_last_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/chassis_no"
+                android:textColor="@color/rf_text_gray5"
+                android:textSize="@dimen/text_15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etRegistrationNo" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etChassisNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/rounded_corner_background"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/chassis_no"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mobile_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/engine_no"
+                android:textColor="@color/rf_text_gray5"
+                android:textSize="@dimen/text_15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etChassisNo" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEngineNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/rounded_corner_background"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/engine_no"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_mobile_number" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_address_line_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/make"
+                android:textColor="@color/rf_text_gray5"
+                android:textSize="@dimen/text_15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etEngineNo" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etMake"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/rounded_corner_background"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/make"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_address_line_1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_address_line_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/pos"
+                android:textColor="@color/rf_text_gray5"
+                android:textSize="@dimen/text_15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etMake" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/rounded_corner_background"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/pos"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_address_line_2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_stage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/stage"
+                android:textColor="@color/rf_text_gray5"
+                android:textSize="@dimen/text_15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etPos" />
+
+            <CheckBox
+                android:id="@+id/pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/pending"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_stage" />
+
+            <CheckBox
+                android:id="@+id/closed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/closed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toEndOf="@+id/pending"
+                app:layout_constraintTop_toBottomOf="@id/tv_stage" />
+
+            <CheckBox
+                android:id="@+id/hold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/hold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toEndOf="@id/closed"
+                app:layout_constraintTop_toBottomOf="@id/tv_stage" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnApply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/_20dp"
+                android:backgroundTint="@color/rf_btn_red"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/apply"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                app:cornerRadius="@dimen/rounded_corner_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/_10dp"
+                android:backgroundTint="@color/btn_color"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/clear_filter"
+                android:textColor="@color/rf_btn_red"
+                android:textSize="@dimen/text_14"
+                app:cornerRadius="@dimen/rounded_corner_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnApply" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
